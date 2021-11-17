@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/Mererninditorle/new_project_17.11.21#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongodb": "^4.1.4",
+    "pug": "^3.0.2",
+    "stylus": "^0.55.0"
   }
 }
