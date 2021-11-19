@@ -1,10 +1,27 @@
 const express = require("express");
+const serverRouter = require("./server/routes/mainRouter");
+const stylus = require("stylus"); // подключаем библиотеку stylus
+
 // const router = require("./");
+
 const app = express();
 const port = process.env.PORT || 1911;
 
-app.get("/", (rq,rs) => {
-    rs.send("<h1>Портал здорового питания</h1>");
-});
+app.use(stylus.middleware({
+    src: "./public/",
+    dest: "./public"
+})); 
 
-app.listen(port), e => {console.log("succes")};
+// app.use(stylus.middleware({
+//     src: "./public/", - откуда берем файлы stylus
+//     dest: "./public" -  куда отправляем файлы stylus
+// })); 
+
+app.set("views", "./server/views");
+app.set("view engine", "pug");
+
+app.use(express.static("./public"));
+
+app.use("/", serverRouter);
+
+app.listen(port);

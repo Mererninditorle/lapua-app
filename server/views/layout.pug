@@ -1,0 +1,16 @@
+doctype html
+// zxx -  обозначение языка 
+html(lang = "zxx") 
+html
+    head
+        title Главная страница
+        link(rel = "stylesheet" href = "style.css")
+        meta(charset = "utf-8")
+    body
+        h1 Главная <br> страница
+        // block body
+           block - ключевое слово для связки шаблонов с макетом
+           body - любое слово, обозначающее шаблон, который связывают с данным (идентификатор шаблона)
+           Подключаем шаблон index.pug ниже  
+        block body 
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, adipisci.
