@@ -17,11 +17,11 @@ app.use(stylus.middleware({
 //     dest: "./public" -  куда отправляем файлы stylus
 // })); 
 
-app.set("views", "./server/views");
-app.set("view engine", "pug");
+app.set("views", "./server/views"); // подключаем препроцессор
+app.set("view engine", "pug"); // подключаем движок pug
 
-app.use(express.static("./public"));
+app.use(express.static("./public")); // указываем расположение шаблонов
 
-app.use("/", serverRouter);
+app.use("/", serverRouter); 
 
-app.listen(port);
+app.listen(port); // запускаем сервер
