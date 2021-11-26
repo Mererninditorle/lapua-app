@@ -7,6 +7,7 @@ const stylus = require("stylus"); // подключаем библиотеку s
 const app = express();
 const port = process.env.PORT || 1911;
 
+app.use(express.json());
 app.use(stylus.middleware({
     src: "./public/",
     dest: "./public"

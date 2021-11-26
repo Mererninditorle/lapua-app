@@ -5,6 +5,9 @@ body {
   margin: 0;
   min-height: 100vh;
   flex-direction: column;
+form
+  display: flex;
+  flex-directiom: column;
 }
 body h2 {
   color: #f00;
