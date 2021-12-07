@@ -12,7 +12,7 @@ addForm.addEventListener("submit", e => {
         };
     };
     console.log(body); // -- вывод продукта
-    sendForm(body, e.target.method, "/add");
+    sendForm(body, e.target.method, "/api/add");
 });
 
 // Отправка товара

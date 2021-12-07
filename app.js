@@ -1,5 +1,6 @@
 const express = require("express");
 const serverRouter = require("./server/routes/mainRouter");
+const dbRouter = require("./server/routes/dbRouter");
 const stylus = require("stylus"); // подключаем библиотеку stylus
 
 // const router = require("./");
@@ -11,7 +12,7 @@ app.use(express.json());
 app.use(stylus.middleware({
     src: "./public/",
     dest: "./public"
-})); 
+}));
 
 // app.use(stylus.middleware({
 //     src: "./public/", - откуда берем файлы stylus
@@ -24,5 +25,6 @@ app.set("view engine", "pug"); // подключаем движок pug
 app.use(express.static("./public")); // указываем расположение шаблонов
 
 app.use("/", serverRouter); 
+app.use("/api", dbRouter); 
 
 app.listen(port); // запускаем сервер

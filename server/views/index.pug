@@ -16,6 +16,18 @@ block body
     each el in tableCaptions
         thead #{el}
 
+    .Card 
+        a(href="/fruits")
+            h2 Fruits
+
+    .Card 
+        a(href="vegetables")
+            h2 Vegetables
+
+    .Card 
+        a(href="berries")
+            h2 Berries
+
 
     form#addProduct(method = "POST")
         input(type = "text" name = "name" placeholder = "Product name")

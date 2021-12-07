@@ -29,11 +29,6 @@ for (let i = 1; i < data.length; i++) {
 // console.log(products); //- вывод готового массива
 // ------------------------------------------------------------------------------------------
 
-router.post("/add", (req,res) => {
-    console.log(res.body) // получить тело формы
-    res.send({msg: "Succesfully added"}) // вывод успешной операции
-    // Добавить в маиисв новые данные и перезаписать файл csv
-})
 
 
 router.get("/", (req,res) => {
@@ -43,7 +38,5 @@ router.get("/", (req,res) => {
         tableCaptions: data[0].split(";")
     });
 });
-
-
 
 module.exports = router;
