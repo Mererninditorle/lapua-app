@@ -39,4 +39,11 @@ router.get("/", (req,res) => {
     });
 });
 
+router.get("/vegetables", (req, res) => {
+    res.render("Category", {
+        title: "Vegetables"
+    });
+});
+
+
 module.exports = router;
