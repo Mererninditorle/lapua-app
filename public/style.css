@@ -5,9 +5,6 @@ body {
   margin: 0;
   min-height: 100vh;
   flex-direction: column;
-form
-  display: flex;
-  flex-directiom: column;
 }
 body h2 {
   color: #f00;
@@ -18,4 +15,26 @@ body>h1 {
 }
 body:hover {
   background-color: #eee;
+}
+body form {
+  display: flex;
+  flex-directiom: column;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+.products__item {
+  display: flex;
+  padding: 40px;
+  font-family: sans-serif;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px 0 #002;
+  cursor: pointer;
+}
+.products__item:hover {
+  background-color: rgba(0,0,0,0.133);
 }

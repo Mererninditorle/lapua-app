@@ -16,5 +16,23 @@ body
         background-color #eee
     
     form
+        display flex
+        flex-directiom column
+
+.products
+    display grid
+    grid-template-columns repeat(4, 1fr)
+    gap 40px
+
+.products__item
     display flex
-    flex-directiom column
+    padding 40px
+    font-family sans-serif
+    flex-direction column
+    align-items center
+    justify-content center
+    box-shadow 0 0 5px 0 #000022
+    cursor pointer
+    &:hover 
+        background-color #0002
+
