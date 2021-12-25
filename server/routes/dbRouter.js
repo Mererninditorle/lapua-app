@@ -9,7 +9,7 @@ router.post("/add", (req,res) => {
         if (err) {
             console.log("error")
         } else {
-            const table = client.db("food");
+            const table = client.db("knives");
             const col = table.collection("products");
             col.insertOne(req.body, err => {
                 if (err) {
@@ -26,21 +26,23 @@ router.post("/add", (req,res) => {
     });
 });
 
-router.get("/vegetables", (req,res) => {
+
+router.get("/products", (req,res) => {
     const client = db();
     client.connect(err => {
         if (err) {
             console.log("error")
         } else {
-            const table = client.db("food");
+            const table = client.db("knives");
             const col = table.collection("products");
             col.insertOne(req.body, err => {
                 if (err) {
                     res.send({"msg": "Connection Error"});
                 } else {
-                    col.find({"type": "Vegetable"}).toArray((err, data) => {
+                    col.find({"type" : "knife"}).toArray((err, data) => {
                         if (err) {
                             console.log(err);
+                            client.close();
                         } else {
                             console.log(data);
                             res.send({"data": data});
@@ -53,19 +55,31 @@ router.get("/vegetables", (req,res) => {
     });
 });
 
-// Удаление продукта
-router.get("/del/:id", (req,res) => {
+//Spyderco
+router.get("/spyderco", (req,res) => {
     const client = db();
-    client.connect((err) => {
+    client.connect(err => {
         if (err) {
-            console.log(err);
-            client.close();
+            console.log("error")
         } else {
-            const col = client.db("food").collection("products");
-            console.log(req.params);
-            col.deleteOne({"_id": ObjectId(req.params.id)});
-            client.close();
-            res.send({"msg": "Succesfully deleted"});
+            const table = client.db("knives");
+            const col = table.collection("products");
+            col.insertOne(req.body, err => {
+                if (err) {
+                    res.send({"msg": "Connection Error"});
+                } else {
+                    col.find({"brand": "Spyderco"}).toArray((err, data) => {
+                        if (err) {
+                            console.log(err);
+                            client.close();
+                        } else {
+                            console.log(data);
+                            res.send({"data": data});
+                            client.close();
+                        };
+                    });
+                };
+            });
         };
     });
 });

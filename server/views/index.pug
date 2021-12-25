@@ -1,44 +1,20 @@
 extends layout.pug
 
 block body
-    h2 Это контент главной странциы (Block body)
-    ul
-        each el in tableCaptions
-            p #{el}   
-
-        each pr in products
-            li
-                each el, key in pr
-                    span #{key}: #{el}, &#032;
-
-
-
-    each el in tableCaptions
-        thead #{el}
-
-    .Card 
-        a(href="/fruits")
-            h2 Fruits
-
-    .Card 
-        a(href="vegetables")
-            h2 Vegetables
-
-    .Card 
-        a(href="berries")
-            h2 Berries
-
-
-    form#addProduct(method = "POST")
-        input(type = "text" name = "name" placeholder = "Product name")
-        select(name = "type")
-            option(value = "Fruit") Fruits
-            option(value = "Vegetable") Vegetables
-            option(value = "Berry") Berries
-        input(type="number" name = "b" placeholder = "proteins" step = 0.1 min = 0)
-        input(type="number" name = "h" placeholder = "fats" step = 0.1 min = 0)
-        input(type="number" name = "u" placeholder = "carbohydrates" step = 0.1 min = 0)
-        input(type="number" name = "kcal" placeholder = "kcal" step = 0.1 min = 0)
-        button(type = "submit") Add product
-    script(src = "/js/addProduct.js")
-    
+    .Screen1
+        //- img(src="https://cdn.shopify.com/s/files/1/0990/8672/products/knife-spyderco-swayback-w-seigaiha-motif-titanium-exclusive-8_2000x.jpg?v=1624570952", alt="screen1")
+        .screen1Wrapper
+            .quote
+                h1 "A knife is only as good as the one who wields it."
+                i -Patrick Ness
+            .quote_img
+                img(src="https://images.squarespace-cdn.com/content/v1/5a99da7a697a98dcc6ee8b0a/1597779928096-I7QIKZLB6RPXXEN1ITYL/Knife+photo+2.JPG", alt="quote_img")
+    .Screen2
+        .screen2Header
+            h2 Why us?
+        .screen2Cards
+            .screen2Card1
+            .screen2Card2
+            .screen2Card3
+    .Screen3
+        

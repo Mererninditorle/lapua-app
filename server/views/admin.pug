@@ -1,0 +1,25 @@
+extends layout.pug
+
+block admin
+    .body
+        .add_product
+            .heading_add_pr Add product
+            form#addProduct(method = "POST")
+                select(name = "brand")
+                    option(value = "Spyderco") Spyderco
+                    option(value = "Microtech") Microtech/Marifone
+                    option(value = "Zero Tolerance") Zero Tolerance
+                    option(value = "Benchmade") Benchmade
+                input(type = "text" name = "model" placeholder = "Model")
+                input(type="text" name = "steel" placeholder = "Steel")
+                input(type="number" name = "hardness" placeholder = "Steel hardness" step = 0.1 min = 0)
+                input(type="text" name = "blade_shape" placeholder = "Blade shape")
+                input(type="text" name = "path" placeholder = "image path")
+                input(type="text" name = "price" placeholder = "price(rub)")
+                button(type = "submit") Add product
+        .all_products
+            h2 All products
+            .allproducts 
+            script(src = "/js/getProducts.js")
+    script(src = "/js/addProduct.js")
+    

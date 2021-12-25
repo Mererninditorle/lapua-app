@@ -1,17 +1,54 @@
 doctype html
-// zxx -  обозначение языка 
-html(lang = "zxx") 
+html(lang = "zxx")
+
+//- html    
+//-     head
+//-         title Knife Shop
+//-         link(rel = "stylesheet" href = "style.css")
+//-         link(rel= "preconnect" href= "https://fonts.googleapis.com") 
+//-         link(rel= "preconnect" href= "https://fonts.gstatic.com" crossorigin)
+//-         link(href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&display=swap" rel="stylesheet")
+//-         meta(charset = "utf-8")
+//-     body
+//-         .header
+//-             .logo
+//-                 a(href="http://localhost:5453")
+//-                     //- img(src="https://e7.pngegg.com/pngimages/626/896/png-clipart-knife-aesthetics-anime-manga-art-knives-love-orange.png", alt="Logo").logo_img
+//-                     div KNIFE SHOP
+//-             .buttons
+//-                     .btn Log in
+//-                     .btn Cabinet
+//-         block body
+//-         block admin
+//-         .footer
+//-             .soc_media
+//-                 a(href="")
+//-                     img(src="https://icon-library.com/images/youtube-icon-png-black/youtube-icon-png-black-24.jpg", alt="youtube")
+//-                 a(href="").instagram
+//-                     img(src="https://cdn-icons-png.flaticon.com/512/87/87390.png", alt="instagram")
+//-             .desc
+//-                 .footer_desc Knife Shop - Central knife store
+//-                 .footer_desc_2 Проектная работа ITHUB Шаповалова Ивана
+
 html
     head
-        title Главная страница
-        link(rel="favicon", href="/favicon.co")
+        title Knife Shop
         link(rel = "stylesheet" href = "style.css")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin) 
+        link(href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet")
+        link(rel="favicon", href="/favicon.ico")
         meta(charset = "utf-8")
+        meta(name="viewport" content="width=device-width")
     body
-        h1 BODY
-        // block body
-           block - ключевое слово для связки шаблонов с макетом
-           body - любое слово, обозначающее шаблон, который связывают с данным (идентификатор шаблона)
-           Подключаем шаблон index.pug ниже  
-        block body 
-        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, adipisci.
+        header.header
+            a(href="http://localhost:5453/products")
+                div knives
+            .logo
+                a(href="http://localhost:5453")
+                    img(src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2c93d155-8683-4766-af8e-fdd6b21fad57/d5tclw1-36fbb471-2bdf-424d-bdab-ccdc760dad7c.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzJjOTNkMTU1LTg2ODMtNDc2Ni1hZjhlLWZkZDZiMjFmYWQ1N1wvZDV0Y2x3MS0zNmZiYjQ3MS0yYmRmLTQyNGQtYmRhYi1jY2RjNzYwZGFkN2MucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.n5I6o8AB7xB-zDrg8YWVGICAdV1_yCp9fICpfySKZeI", alt="logo")
+                    //- div KNIFE SHOP
+            a(href="http://localhost:5453/admin")
+                div admin
+    block body
+    block admin

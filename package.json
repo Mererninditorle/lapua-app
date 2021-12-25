@@ -1,23 +1,14 @@
 {
-  "name": "new_project",
+  "name": "knife_shop",
   "version": "1.0.0",
-  "description": "Портал здорового питания",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "smoke": "nodemon app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Mererninditorle/new_project_17.11.21.git"
+    "start": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Mererninditorle/new_project_17.11.21/issues"
-  },
-  "homepage": "https://github.com/Mererninditorle/new_project_17.11.21#readme",
   "dependencies": {
     "express": "^4.17.1",
     "mongodb": "^4.2.1",

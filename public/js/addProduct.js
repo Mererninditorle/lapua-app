@@ -26,5 +26,5 @@ const sendForm = async(body, method, path) => {
         body: JSON.stringify(body)
     });
     let data = await response.json();
-    console.log(data);
+    // console.log(data);
 };
